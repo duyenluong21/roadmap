@@ -6,25 +6,32 @@
 
 2. What is HTTP?
 
-Giao thức truyền tải siêu văn bản qua web bằng mô hình request-response
-Giao tiếp giữa máy chủ và trình duyệt
-Mỗi yêu cầu là độc lập
-HTTPS là phiên bản mã hóa của HTTP
+- Giao thức truyền tải siêu văn bản qua web bằng mô hình request-response
+- Giao tiếp giữa máy chủ và trình duyệt
+- Đặc điểm:
+  - Stateless (không lưu trạng thái giữa các request)
+  - Client-server model
+
+- Mỗi yêu cầu là độc lập
+- HTTPS là phiên bản mã hóa của HTTP (HTTP + SSL/TLS)
 
 3. What is Domain?
 
-Là địa chỉ internet dễ đọc với con người
-Được dịch sang địa chỉ IP để máy tính nhận dạng
-Quản lý bởi các nhà cung cấp, đăng kí
+- Là địa chỉ internet dễ đọc với con người
+- Được dịch sang địa chỉ IP để máy tính nhận dạng
+- Quản lý bởi các nhà cung cấp, đăng kí
 
 4. What is hosting?
 
-Cung cấp không gian máy chủ và phân phối website trên internet
+- Cung cấp không gian máy chủ và phân phối website trên internet
+- Chức năng:
+  - Lưu trữ code, database, file website
+  - Cung cấp CPU, RAM, storage, network
 
 5. DNS and how it works?
 
-DNS: Hệ thống tên miền
-Dịch các ten miền dễ đọc thành địa chỉ IP
+- DNS: Hệ thống tên miền
+- Dịch các ten miền dễ đọc thành địa chỉ IP
 
 6. Browsers and how it works?
 
@@ -39,3 +46,32 @@ Dịch các ten miền dễ đọc thành địa chỉ IP
 * UI backend: Xử lý và hiển thị các UI component như textbox, dropdown
 * JS Interpreter: Xử lý và thực thi các đoạn mã JS để hiển thị lên trang web
 * Data persistence: Có chức năng lưu trữ thông tin và dữ liệu trên máy local (Cache, local storage, cookies …)
+
+```mermaid
+flowchart TB
+
+    UI[User Interface]
+
+    BE[Browser Engine]
+
+    RE[Rendering Engine]
+
+    NET[Networking]
+    JS[JavaScript Interpreter]
+    UIB[UI Backend]
+
+    DP[Data Persistence]
+
+    UI --> BE
+    UI --> UIB
+    BE --> RE
+
+    BE --> DP
+
+    RE --> NET
+    RE --> JS
+    RE --> UIB
+
+    NET --> RE
+    JS --> RE
+```
