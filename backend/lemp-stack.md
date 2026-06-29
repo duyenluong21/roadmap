@@ -9,6 +9,12 @@
 
 2. Tại sao cần đến nginx?
 
+- Trước đó: PHP có thể tự chạy bằng built-in server (`php -S`), không cần web server riêng. Nhưng nhược điểm khiến nó chỉ hợp để dev, không dùng production:
+    - Chỉ xử lý 1 request tại 1 thời điểm (blocking) => đông người là nghẽn
+    - Không có HTTPS/TLS
+    - Phục vụ file tĩnh (ảnh, CSS, JS) rất kém, không cache, không tối ưu
+    - Không có reverse proxy, load balancer, chống DDoS, IP blocking
+- => Production cần nginx đứng trước: nhận request, phục vụ file tĩnh, lo SSL/bảo mật, rồi mới đẩy phần động cho PHP-FPM
 - Xử lý lưu lượng khủng: Ngix rất nhẹ, tiêu tốn ít bộ nhớ. Nó xử lý hàng chục nghìn yêu cầu mượt mà
 - Ngoài làm web server, nginx còn được sử dụng như reverse proxy, load balancer, caching và API gateway
 - Bảo mật: Hỗ trợ access control, IP blocking, chống DDoS và nhiều tính năng bảo vệ dữ liệu
