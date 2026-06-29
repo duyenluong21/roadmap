@@ -53,4 +53,22 @@ Thêm vào đó, để ra được con số công cuối tháng, hệ thống ph
 
 ## 4. Dự án đem lại hiệu quả kinh doanh tốt nhất?
 
-> (Trả lời sau)
+**Dự án mang lại hiệu quả kinh doanh tốt nhất: HRM**
+
+**Trước khi có hệ thống:**
+
+- Chấm công phải thuê bên thứ 3 lắp camera, cuối tháng HR tự đối chiếu và tính toán thủ công trên Excel — tốn thời gian và dễ sai
+- Nghỉ phép xin qua nhóm chat, cuối tháng kế toán phải đọc lại toàn bộ tin nhắn để tổng hợp — không có gì lưu trữ bài bản
+- Thiết bị công ty chỉ mượn qua miệng, không biên bản, không bằng chứng — thất lạc không truy được trách nhiệm
+
+**Sau khi triển khai HRM:**
+
+- Chấm công tự động, kiểm tra IP và vị trí địa lý, kết quả tính công cuối tháng ra tự động — công ty không còn cần thuê dịch vụ camera bên ngoài
+- Nghỉ phép có luồng phê duyệt rõ ràng, lưu lại đầy đủ, kế toán chỉ cần xuất báo cáo thay vì đọc lại hàng trăm tin nhắn
+- Thiết bị được ghi nhận từ lúc bàn giao đến lúc thu hồi, có ký nhận, truy được lịch sử — tránh tranh chấp và thất lạc
+
+**Kết quả:**
+
+- Cắt chi phí thuê dịch vụ bên thứ 3
+- Giảm đáng kể thời gian xử lý thủ công của HR và kế toán mỗi tháng
+- Minh bạch hóa tài sản nội bộ, giảm rủi ro thất lạc không rõ trách nhiệm
