@@ -50,6 +50,20 @@
 * Dễ mở rộng
 * Dễ bảo trì
 * Truy vấn hiệu quả
+  Những thành phần quan trọng
+  a. Table
+
+- Chia dữ liệu thành các bảng theo từng đối tượng
+  b. Primary key
+- Định danh duy nhất của 1 bản ghi
+- Không được trùng
+  c. Foreign key
+- Liên kết giữa các bảng
+- Đảm bảo dữ liệu hợp lệ
+  d. Relationship
+  e. Chuẩn hóa
+- Giảm dữ liệu trùng lặp
+- Dễ cập nhật
 
 5. Migration
 
@@ -103,6 +117,9 @@
 * JOIN
 * Eager Loading (Laravel with())
 * Batch Query
+  Không dùng with(): Mỗi lần truy cập dữ liệu liên quan (ví dụ $user->posts), Laravel lại gửi 1 query mới xuống database. Có 100 user thì có thể phát sinh 101 query.
+  Dùng with(): Laravel lấy toàn bộ dữ liệu liên quan ngay từ đầu (chỉ khoảng 2 query), rồi tự ghép dữ liệu trong bộ nhớ (RAM) thay vì tiếp tục hỏi database.
+  Vì số lần truy cập database giảm rất nhiều (101 query → 2 query), nên thời gian phản hồi nhanh hơn và hiệu năng được cải thiện.
 
 ĐẶC BIỆT INDEX
 
@@ -128,13 +145,11 @@
   VD: MATCH(content)
   AGAINST('mysql')
 - Spatial Index: Cho dữ liệu tọa độ
-
-b. PostgreSQL
-
+  b. PostgreSQL
 - B-Tree:
 
 * Cuốn từ điển sắp xếp dữ liệu theo thứ tự và tạo thành 1 cây để tìm kiếm rất nhanh
-* Dùng khi >, <, BETWEEN, ORDER BY, GROUP BY (mặc định, dùng nhiều nhất)
+* Dùng trịkhi >, <, BETWEEN, ORDER BY, GROUP BY (mặc định, dùng nhiều nhất)
 
 - Hash index:
 
